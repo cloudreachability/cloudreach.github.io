@@ -34,7 +34,7 @@
         }
     </style>
     -->
-    <title>Surrounded by the Clouds</title>
+    <title>Cloud Reachability</title>
 
 </head>
 
@@ -64,22 +64,46 @@
 -->
     <div class="container">
         <br><br><br>
-        <h1 id="top">Surrounded by the Clouds</h1>
+        <h1 id="top">Global Cloud Reachability Measurements</h1>
 
         <!--  home    -->
         <h2 id="home"> Overview</h2>
 
-        This is where we will add overview text of the project.
+        This is where we will add overview text of the project. [Please suggest some text].
 
         <!--  data    -->
         <h2 id="result">Result Overview</h2>
 
         This is where we will add all the interactive plots.
-        <div id="mapDiv"></div>
-        <div id="worldDiv"></div>
 
-        <a href="ecdf.html">Here is a link to the ECDF</a>
+        <div id="clouddc" style="padding-top: 0.5em">
 
+            <h4>Distribution of Target Datacenters </h4>
+            Double-click on any cloud provider in legend to only show its datacenters
+            <div id="mapDiv"></div>
+            <span>
+                Note: The geo-location of datacenters is <b>approximate</b>.
+            </span>
+        </div>
+
+        <div id="latencyThresh" style="padding-top: 0.5em">
+            <h4>Cloud Support for Next-Generation Application Timing Thresholds</h4>
+            <div id="worldDiv"></div>
+
+            <span>
+                Refer to our <b>"Pruning Edge Research with Latency Shears"</b> paper published in ACM HotNets 2020 for more details on timing thresholds.
+                You can find it in <a href="#resources">Publications</a> section.
+            </span>
+        </div>
+
+        <div id="latency" tyle="padding-top: 0.5em">
+            <h4>Global Cloud Access Latency</h4>
+
+            First we will show static plots here.
+
+            <br>
+            <a href="interactive/ecdf.html">Here is a link to the ECDF</a>
+        </div>
         <!--Paper-->
 
         <h2 id="paper" style="hr-text-container">Publications</h2>
@@ -292,17 +316,19 @@
     <!-- Bootstrap JS - necessary for expanding the navbar menu -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script> 
-        $(function(){
-         $("#mapDiv").load("map.html");
-        });  
-     </script>
+    <script>
+        $(function() {
+            $("#mapDiv").load("interactive/map.html");
+        });
 
-    <script> 
-        $(function(){
-         $("#worldDiv").load("world_map_percentiles.html");
-        });  
-     </script>
+    </script>
+
+    <script>
+        $(function() {
+            $("#worldDiv").load("interactive/world_map_percentiles.html");
+        });
+
+    </script>
 
 </body>
 
