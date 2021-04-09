@@ -51,8 +51,8 @@
                 <div class="navbar-nav container">
                     <a class="nav-item nav-link" href="#home">Home</a>
                     <a class="nav-item nav-link" href="#result">Results</a>
-                    <a class="nav-item nav-link" href="#paper">Publications</a>
                     <a class="nav-item nav-link" href="#resources">Resources</a>
+                    <a class="nav-item nav-link" href="#paper">Publications</a>
                     <a class="nav-item nav-link" href="#contact">Contact</a>
                     <a class="nav-item nav-link" href="#partners">Partners</a>
                 </div>
@@ -63,237 +63,260 @@
     <a class="github-fork-ribbon right-bottom fixed" href="https://github.com/ipv6hitlist/ipv6hitlist.github.io" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 -->
     <div class="container">
-        <br><br><br>
-        <h1 id="top">Global Cloud Reachability Measurements</h1>
 
-        <!--  home    -->
-        <h2 id="home"> Overview</h2>
+        <div id="home" style="padding-top: 6em">
 
-        This is where we will add overview text of the project. [Please suggest some text].
+            <h1 class="decorated">Global Cloud Reachability Measurements</h1>
+
+            <div style="padding-top: 3em">
+                This is where we will add overview text of the project. [Please suggest some text].
+            </div>
+        </div>
 
         <!--  data    -->
-        <h2 id="result">Result Overview</h2>
+        <section id="result">
 
-        This is where we will add all the interactive plots.
+            <h2 class="decorated"><span>Results</span></h2>
 
-        <div id="clouddc" style="padding-top: 0.5em">
+            This is where we will add all the interactive plots.
 
-            <h4>Distribution of Target Datacenters </h4>
-            Double-click on any cloud provider in legend to only show its datacenters
-            <div id="mapDiv"></div>
-            <span>
-                Note: The geo-location of datacenters is <b>approximate</b>.
-            </span>
-        </div>
+            <div id="clouddc" style="padding-top: 0.5em">
 
-        <div id="latencyThresh" style="padding-top: 0.5em">
-            <h4>Cloud Support for Next-Generation Application Timing Thresholds</h4>
-            <div id="worldDiv"></div>
+                <h4>Distribution of Target Datacenters </h4>
+                Double-click on any cloud provider in legend to only show its datacenters
+                <div id="mapDiv"></div>
+                <span>
+                    Note: The geo-location of datacenters is <b>approximate</b>.
+                </span>
+            </div>
 
-            <span>
-                Refer to our <b>"Pruning Edge Research with Latency Shears"</b> paper published in ACM HotNets 2020 for more details on timing thresholds.
-                You can find it in <a href="#paper">Publications</a> section.
-            </span>
-        </div>
+            <div id="latencyThresh" style="padding-top: 0.5em">
+                <h4>Cloud Support for Next-Generation Application Timing Thresholds</h4>
 
-        <div id="latency" tyle="padding-top: 0.5em">
-            <h4>Global Cloud Access Latency</h4>
+                <span>
+                    Refer to our <b>"Pruning Edge Research with Latency Shears"</b> paper published in ACM HotNets 2020 for more details on timing thresholds.
+                    You can find it in <a href="#paper">Publications</a> section.
+                </span>
 
-            First we will show static plots here.
+                <div id="worldDiv" style="padding-top: 0.5em"></div>
+            </div>
 
-            <br>
-            <a href="interactive/ecdf.html">Here is a link to the ECDF</a>
-        </div>
-        <!--Paper-->
+            <div id="latency" tyle="padding-top: 0.5em">
+                <h4>Global Cloud Access Latency</h4>
 
-        <h2 id="paper" style="hr-text-container">Publications</h2>
+                First we will show static plots here.
 
-        <span style="color: #6d7993">*Arranged in chronological order.</span>
-
-        <table>
-
-
-            <!--  next publication  -->
-            <tr style="background-color: #ffffff; border: none">
-                <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/surrounded_WWW.pdf" class="no-decoration" target="_blank">
-                        <img class="pubs_img" src="documents/surrounded_WWW.png">
-                    </a>
-                </td>
-                <td style="vertical-align: top; padding-left: 3px">
-                    <div style="position: relative">
-                        <span class="pubs_title">
-                            <a href="documents/surrounded_WWW.pdf" style="text-decoration: none; border: none" target="_blank">
-                                Surrounded by the Clouds: A Comprehensive Cloud Reachability Study
-                            </a>
-                        </span>
-                        <br>
-                        <span>
-                            <b style="text-decoration: underline">Authors:</b>
-                            Lorenzo Corneo, Maximilian Eder, Nitinder Mohan, Aleksandr Zavodovski, Suzan Bayhan, Walter Wong, Per Gunningberg, Jussi Kangasharju, Jörg Ott.
-                        </span>
-                        <br>
-                        <span style="pub-text">
-                            <b style="text-decoration: underline">Publication Venue:</b>
-                            30<sup>th</sup> The Web Conference (WebConf) - <b>2021</b>
-                        </span>
-                        <br>
-                        <span style="pub-text">
-                            <b style="text-decoration: underline">Abstract.</b>
-                            In the early days of cloud computing, datacenters were sparsely deployed at distant locations far from end-users with high end-to-end communication latency. However, today's cloud datacenters have become more geographically spread, the bandwidth of the networks keeps increasing, pushing the end-users latency down. In this paper, we provide a comprehensive cloud reachability study as we perform extensive global client-to-cloud latency measurements towards 189 datacenters from all major cloud providers. We leverage the well-known measurement platform RIPE Atlas, involving up to 8500 probes deployed in heterogeneous environments, e.g., home and offices. Our goal is to evaluate the suitability of modern cloud environments for various current and predicted applications. We achieve this by comparing our latency measurements against known human perception thresholds and are able to draw inferences on the suitability of current clouds for novel applications, such as augmented reality. Our results indicate that the current cloud coverage can easily support several latency-critical applications, like cloud gaming, for the majority of the world’s population. (<a href="https://doi.org/10.1145/3442381.3449854" target="_blank"><i class="fas fa-globe-americas"></i> DOI</a>)
-                        </span>
-                    </div>
-                </td>
-            </tr>
-
-            <br>
-
-            <!--  next publication  -->
-            <tr style="background-color: #ffffff; border: none">
-                <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="" class="no-decoration" target="_blank">
-                        <img class="pubs_img" src="documents/tbr.png">
-                    </a>
-                </td>
-                <td style="vertical-align: top; padding-left: 3px">
-                    <div style="position: relative">
-                        <span class="pubs_title">
-                            <a href="" style="text-decoration: none; border: none" target="_blank">
-                                (How Much) Can Edge Computing Change Network Latency?
-                            </a>
-                        </span>
-                        <br>
-                        <span>
-                            <b style="text-decoration: underline">Authors:</b>
-                            Lorenzo Corneo, Nitinder Mohan, Aleksandr Zavodovski, Walter Wong, Christian Rohner, Per Gunningberg, Jussi Kangasharju.
-                        </span>
-                        <br>
-                        <span style="pub-text">
-                            <b style="text-decoration: underline">Publication Venue:</b>
-                            20th IFIP Networking Conference (Networking) - <b>2021</b>
-                        </span>
-                        <br>
-                        <span style="pub-text">
-                            <b style="text-decoration: underline">Abstract.</b>
-                            Edge computing aims to enable applications with stringent latency requirements, e.g., augmented reality, and tame the overwhelming data streams generated by IoT devices. A core of this paradigm is to bring the computation from a distant cloud closer to service consumers and data producers. Consequentially, the issue of edge computing facilities' placement arises. We present a comprehensive analysis suggesting where to place general-purpose edge computing resources on an Internet-wide scale. We base our conclusions on extensive real-world network measurements. We perform extensive traceroute measurements from RIPE Atlas to datacenters in the US, resulting in a graph of 11K routers. We identify the affiliations of the routers to determine the network providers that can act as edge providers. We devise several edge placement strategies and show that they can improve cloud access latency by up to 30%. (<a href="" target="_blank"><i class="fas fa-globe-americas"></i> DOI</a>)
-                        </span>
-                    </div>
-                </td>
-            </tr>
-
-
-            <br>
-
-            <!--  next publication  -->
-            <tr style="background-color: #ffffff; border: none">
-                <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/pruningHotnets2020.pdf" class="no-decoration" target="_blank">
-                        <img class="pubs_img" src="documents/pruningHotnets2020.png">
-                    </a>
-                </td>
-                <td style="vertical-align: top; padding-left: 3px">
-                    <div style="position: relative">
-                        <span class="pubs_title">
-                            <a href="documents/pruningHotnets2020.pdf" style="text-decoration: none; border: none" target="_blank">
-                                Pruning Edge Research with Latency Shears
-                            </a>
-                        </span>
-                        <br>
-                        <span>
-                            <b style="text-decoration: underline">Authors:</b>
-                            Nitinder Mohan, Lorenzo Corneo, Aleksandr Zavodovski, Suzan Bayhan, Walter Wong, Jussi Kangasharju.
-                        </span>
-                        <br>
-                        <span style="pub-text">
-                            <b style="text-decoration: underline">Publication Venue:</b>
-                            19<sup>th</sup> ACM Workshop on Hot Topics in Networks (HotNets) - <b>2020</b>
-                        </span>
-                        <br>
-                        <span style="pub-text">
-                            <b style="text-decoration: underline">Abstract.</b>
-                            Edge computing has gained attention from both academia and industry by pursuing two significant challenges: 1) moving latency critical services closer to the users, 2) saving network bandwidth by aggregating large flows before sending them to the cloud. While the rationale appeared sound at its inception almost a decade ago, several current trends are impacting it. Clouds have spread geographically reducing end-user latency, mobile phones? computing capabilities are improving, and network bandwidth at the core keeps increasing. In this paper, we scrutinize edge computing, examining its outlook and future in the context of these trends. We perform extensive client-to-cloud measurements using RIPE Atlas, and show that latency reduction as motivation for edge is not as persuasive as once believed; for most applications the cloud is already 'close enough' for majority of the world's population. This implies that edge computing may only be applicable for certain application niches, as opposed to a general-purpose solution. (<a href="https://doi.org/10.1145/3422604.3425943" target="_blank"><i class="fas fa-globe-americas"></i> DOI</a>)
-                        </span>
-                    </div>
-                </td>
-            </tr>
-        </table>
-
+                <br>
+                <a href="interactive/ecdf.html">Here is a link to the ECDF</a>
+            </div>
+        </section>
 
 
         <!--Reproducibility-->
 
+        <section id="resources">
 
-        <h2 id="resources">Resources</h2>
+            <h2 class="decorated"><span>Resources</span></h2>
 
-        <div class="resource atlas">
-            <h3>RIPE Atlas Platform</h3>
+            <div class="resource atlas">
+                <h3>RIPE Atlas Platform</h3>
 
-            <figure style="fig">
-                <img class="resource-img" src="images/atlas-probe-density.png">
-                <figcaption class="caption">Distribution of 8000+ Atlas probes used in our measurements</figcaption>
-            </figure>
+                <figure style="fig">
+                    <img class="resource-img" src="images/atlas-probe-density.png">
+                    <figcaption class="caption">Distribution of 8000+ Atlas probes used in our measurements</figcaption>
+                </figure>
 
-            <div id="dataset" style="padding-top: 0.5em">
-                <h4>
-                    <i class="fal fa-database"></i>
-                    Dataset
-                </h4>
+                <div id="dataset" style="padding-top: 0.5em">
+                    <h4>
+                        <i class="fal fa-database"></i>
+                        Dataset
+                    </h4>
+                </div>
+
+                This is where we will explain our datasets.
+
+                <div id="code" style="padding-top: 0.5em">
+                    <h4>
+                        <i class="far fa-code"></i>
+                        Code
+                    </h4>
+                </div>
+
+                We have setup a GitHub page explaining the dataset and detailing reproducibility
+                <a href="https://github.com/lorenzocorneo/surrounded-by-the-clouds/blob/main/README.md">here</a>.
+
             </div>
 
-            This is where we will explain our datasets.
+            <br><br>
 
-            <div id="code" style="padding-top: 0.5em">
-                <h4>
-                    <i class="far fa-code"></i>
-                    Code
-                </h4>
+            <div class="resource speedchecker">
+                <h3>Speedchecker Platform</h3>
+
+                <h4 style="color: red">To be out soon!</h4>
             </div>
+        </section>
 
-            We have setup a GitHub page explaining the dataset and detailing reproducibility
-            <a href="https://github.com/lorenzocorneo/surrounded-by-the-clouds/blob/main/README.md">here</a>.
+        <!--Paper-->
+        <section id="paper">
 
-        </div>
+            <h2 class="decorated" style="hr-text-container"><span>Publications</span></h2>
 
-        <br><br>
+            <span style="color: #6d7993">*Arranged in chronological order.</span>
 
-        <div class="resource speedchecker">
-            <h3>Speedchecker Platform</h3>
+            <table>
 
-            <h4 style="color: red">To be out soon!</h4>
-        </div>
 
+                <!--  next publication  -->
+                <tr style="background-color: #ffffff; border: none">
+                    <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/surrounded_WWW.pdf" class="no-decoration" target="_blank">
+                            <img class="pubs_img" src="documents/surrounded_WWW.png">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; padding-left: 3px">
+                        <div style="position: relative">
+                            <span class="pubs_title">
+                                <a href="documents/surrounded_WWW.pdf" style="text-decoration: none; border: none" target="_blank">
+                                    Surrounded by the Clouds: A Comprehensive Cloud Reachability Study
+                                </a>
+                            </span>
+                            <br>
+                            <span>
+                                <b style="text-decoration: underline">Authors:</b>
+                                Lorenzo Corneo, Maximilian Eder, Nitinder Mohan, Aleksandr Zavodovski, Suzan Bayhan, Walter Wong, Per Gunningberg, Jussi Kangasharju, Jörg Ott.
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Publication Venue:</b>
+                                30<sup>th</sup> The Web Conference (WebConf) - <b>2021</b>
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Abstract.</b>
+                                In the early days of cloud computing, datacenters were sparsely deployed at distant locations far from end-users with high end-to-end communication latency. However, today's cloud datacenters have become more geographically spread, the bandwidth of the networks keeps increasing, pushing the end-users latency down. In this paper, we provide a comprehensive cloud reachability study as we perform extensive global client-to-cloud latency measurements towards 189 datacenters from all major cloud providers. We leverage the well-known measurement platform RIPE Atlas, involving up to 8500 probes deployed in heterogeneous environments, e.g., home and offices. Our goal is to evaluate the suitability of modern cloud environments for various current and predicted applications. We achieve this by comparing our latency measurements against known human perception thresholds and are able to draw inferences on the suitability of current clouds for novel applications, such as augmented reality. Our results indicate that the current cloud coverage can easily support several latency-critical applications, like cloud gaming, for the majority of the world’s population. (<a href="https://doi.org/10.1145/3442381.3449854" target="_blank"><i class="fas fa-globe-americas"></i> DOI</a>)
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+
+                <br>
+
+                <!--  next publication  -->
+                <tr style="background-color: #ffffff; border: none">
+                    <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="" class="no-decoration" target="_blank">
+                            <img class="pubs_img" src="documents/tbr.png">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; padding-left: 3px">
+                        <div style="position: relative">
+                            <span class="pubs_title">
+                                <a href="" style="text-decoration: none; border: none" target="_blank">
+                                    (How Much) Can Edge Computing Change Network Latency?
+                                </a>
+                            </span>
+                            <br>
+                            <span>
+                                <b style="text-decoration: underline">Authors:</b>
+                                Lorenzo Corneo, Nitinder Mohan, Aleksandr Zavodovski, Walter Wong, Christian Rohner, Per Gunningberg, Jussi Kangasharju.
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Publication Venue:</b>
+                                20th IFIP Networking Conference (Networking) - <b>2021</b>
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Abstract.</b>
+                                Edge computing aims to enable applications with stringent latency requirements, e.g., augmented reality, and tame the overwhelming data streams generated by IoT devices. A core of this paradigm is to bring the computation from a distant cloud closer to service consumers and data producers. Consequentially, the issue of edge computing facilities' placement arises. We present a comprehensive analysis suggesting where to place general-purpose edge computing resources on an Internet-wide scale. We base our conclusions on extensive real-world network measurements. We perform extensive traceroute measurements from RIPE Atlas to datacenters in the US, resulting in a graph of 11K routers. We identify the affiliations of the routers to determine the network providers that can act as edge providers. We devise several edge placement strategies and show that they can improve cloud access latency by up to 30%. (<a href="" target="_blank"><i class="fas fa-globe-americas"></i> DOI</a>)
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <br>
+
+                <!--  next publication  -->
+                <tr style="background-color: #ffffff; border: none">
+                    <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/pruningHotnets2020.pdf" class="no-decoration" target="_blank">
+                            <img class="pubs_img" src="documents/pruningHotnets2020.png">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; padding-left: 3px">
+                        <div style="position: relative">
+                            <span class="pubs_title">
+                                <a href="documents/pruningHotnets2020.pdf" style="text-decoration: none; border: none" target="_blank">
+                                    Pruning Edge Research with Latency Shears
+                                </a>
+                            </span>
+                            <br>
+                            <span>
+                                <b style="text-decoration: underline">Authors:</b>
+                                Nitinder Mohan, Lorenzo Corneo, Aleksandr Zavodovski, Suzan Bayhan, Walter Wong, Jussi Kangasharju.
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Publication Venue:</b>
+                                19<sup>th</sup> ACM Workshop on Hot Topics in Networks (HotNets) - <b>2020</b>
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Abstract.</b>
+                                Edge computing has gained attention from both academia and industry by pursuing two significant challenges: 1) moving latency critical services closer to the users, 2) saving network bandwidth by aggregating large flows before sending them to the cloud. While the rationale appeared sound at its inception almost a decade ago, several current trends are impacting it. Clouds have spread geographically reducing end-user latency, mobile phones? computing capabilities are improving, and network bandwidth at the core keeps increasing. In this paper, we scrutinize edge computing, examining its outlook and future in the context of these trends. We perform extensive client-to-cloud measurements using RIPE Atlas, and show that latency reduction as motivation for edge is not as persuasive as once believed; for most applications the cloud is already 'close enough' for majority of the world's population. This implies that edge computing may only be applicable for certain application niches, as opposed to a general-purpose solution. (<a href="https://doi.org/10.1145/3422604.3425943" target="_blank"><i class="fas fa-globe-americas"></i> DOI</a>)
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </section>
 
         <!--Contact-->
+        <section id="contact">
 
-        <h2 id="contact">Contact</h2>
-        <b><a href="https://www.nitindermohan.com/">Nitinder Mohan</a></b>: <b>mohan</b> [AT] <b>in.tum.de</b>
+            <h2 class="decorated"><span>Contact</span></h2>
+            <span style="font-size: 16pt">
+                <b><a href="https://www.nitindermohan.com/">Nitinder Mohan</a></b>: <b>mohan</b> [AT] <b>in.tum.de</b>
+            </span>
 
+        </section>
 
         <!--Partners-->
 
+        <section id="partners">
+            <h2 class="decorated"><span>Partners</span></h2>
 
-        <h2 id="partners">Partners</h2>
+            <div style="padding-bottom: 3em">
+                <div class="row align-items-center" style="padding-top: 3em">
+                    <div class="col-md-3">
+                        <a href="https://www.tum.de/nc/en/homepage/"><img src="logos/tum.png" alt="TUM logo" class="img-fluid" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://www.uu.se/en"><img src="logos/uppsala.png" alt="Uppsala University logo" class="img-fluid" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://www.helsinki.fi/en"><img src="logos/university-helsinki.png" alt="University of Helsinki logo" class="img-fluid" /></a>
+                    </div>
 
-        <div class="row align-items-center">
-            <div class="col-md-3">
-                <a href="https://www.uu.se/en"><img src="logos/uppsala.png" alt="Uppsala University logo" class="img-fluid" /></a>
+                </div>
+                <div class="row align-items-center" style="padding-top: 3em">
+                    <div class="col-md-3">
+                        <a href="https://www.utwente.nl/en/"><img src="logos/UTEN.png" alt="UTwente logo" class="img-fluid" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://www.ripe.net/"><img src="logos/RIPE_NCC_Logo2015.png" alt="RIPE NCC logo" class="img-fluid" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://www.speedchecker.com/"><img src="logos/speedchecker.png" alt="Speedchecker logo" class="img-fluid" /></a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <a href="https://www.tum.de/nc/en/homepage/"><img src="logos/tum.png" alt="TUM logo" class="img-fluid" /></a>
+        </section>
+
+        <section>
+            <div class="ack">
+                Website design inspired by <a href="" target="_blank">netray.io</a> and <a href="" target="_blank">IPv6 hitlist</a>. Designed by Maximilian Eder and Nitinder Mohan.
             </div>
-            <div class="col-md-3">
-                <a href="https://www.utwente.nl/en/"><img src="logos/UTEN.png" alt="UTwente logo" class="img-fluid" /></a>
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-3">
-                <a href="https://www.helsinki.fi/en"><img src="logos/university-helsinki.png" alt="University of Helsinki logo" class="img-fluid" /></a>
-            </div>
-            <div class="col-md-3">
-                <a href="https://www.ripe.net/"><img src="logos/RIPE_NCC_Logo2015.png" alt="RIPE NCC logo" class="img-fluid" /></a>
-            </div>
-            <div class="col-md-3">
-                <a href="https://www.speedchecker.com/"><img src="logos/speedchecker.png" alt="Speedchecker logo" class="img-fluid" /></a>
-            </div>
-        </div>
-        <br><br>
+        </section>
 
     </div> <!-- /container -->
 

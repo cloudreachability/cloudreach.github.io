@@ -261,3 +261,40 @@ table.alt tfoot {
     border: 1px dotted blue;
     text-align: center;
 }
+
+/*Header CSS*/
+
+.decorated {
+    overflow: hidden;
+    text-align: center;
+}
+
+.decorated > span {
+    position: relative;
+    display: inline-block;
+}
+
+.decorated > span:before,
+.decorated > span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 100vw;
+    margin: 0 20px;
+}
+
+.decorated > span:before {
+    right: 100%;
+}
+
+.decorated > span:after {
+    left: 100%;
+}
+
+/*Ack section CSS*/
+.ack {
+    text-align: center;
+    color: dimgrey;
+    padding-bottom: 2em;
+}
