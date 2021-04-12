@@ -93,12 +93,22 @@
             <div id="latencyThresh" style="padding-top: 0.5em">
                 <h4>Cloud Support for Next-Generation Application Timing Thresholds</h4>
 
+                <figure class="fig">
+                    <img class="resource-img-med" src="images/edge-app.png">
+                    <figcaption class="caption">Latency and bandwidth requirements of next-generation applications.
+                        Operation of most applications is governed by three strict latency thresholds.
+                    </figcaption>
+                </figure>
+
                 <span>
-                    Refer to our <b>"Pruning Edge Research with Latency Shears"</b> paper published in ACM HotNets 2020 for more details on timing thresholds.
+                    Refer to our <b>"Pruning Edge Research with Latency Shears"</b> paper published in ACM HotNets 2020 for more details on the timing thresholds.
                     You can find it in <a href="#paper">Publications</a> section.
                 </span>
 
-                <div id="worldDiv" style="padding-top: 0.5em"></div>
+                <figure class="fig">
+                    <div id="worldDiv" style="padding-top: 0.5em"></div>
+                </figure>
+
             </div>
 
             <div id="latency" tyle="padding-top: 0.5em">
@@ -107,6 +117,11 @@
                 First we will show static plots here.
 
                 <br>
+<!--
+                <div class="wrapper">
+                    <a href="#" class="button"><span>Interactive Latency Plot</span></a>
+                </div>
+-->
                 <a href="interactive/ecdf.html">Here is a link to the ECDF</a>
             </div>
         </section>
@@ -121,7 +136,7 @@
             <div class="resource atlas">
                 <h3>RIPE Atlas Platform</h3>
 
-                <figure style="fig">
+                <figure class="fig">
                     <img class="resource-img" src="images/atlas-probe-density.png">
                     <figcaption class="caption">Distribution of 8000+ Atlas probes used in our measurements</figcaption>
                 </figure>
@@ -282,39 +297,44 @@
 
         <!--Partners-->
 
-        <section id="partners">
+        <section style="margin: auto; width: 100%; padding-bottom: 3em" id="about-text">
+
             <h2 class="decorated"><span>Partners</span></h2>
 
-            <div style="padding-bottom: 3em">
-                <div class="row align-items-center" style="padding-top: 3em">
-                    <div class="col-md-3">
+            <div class="list-wrapper">
+                <ul id="services">
+                    <!--                <div class="row align-items-center" style="padding-top: 3em">-->
+                    <li class="square">
                         <a href="https://www.tum.de/nc/en/homepage/"><img src="logos/tum.png" alt="TUM logo" class="img-fluid" /></a>
-                    </div>
-                    <div class="col-md-3">
+                    </li>
+                    <li class="square">
                         <a href="https://www.uu.se/en"><img src="logos/uppsala.png" alt="Uppsala University logo" class="img-fluid" /></a>
-                    </div>
-                    <div class="col-md-3">
+                    </li>
+                    <li class="square">
                         <a href="https://www.helsinki.fi/en"><img src="logos/university-helsinki.png" alt="University of Helsinki logo" class="img-fluid" /></a>
-                    </div>
+                    </li>
 
+                    <!--
                 </div>
                 <div class="row align-items-center" style="padding-top: 3em">
-                    <div class="col-md-3">
+-->
+                    <li>
                         <a href="https://www.utwente.nl/en/"><img src="logos/UTEN.png" alt="UTwente logo" class="img-fluid" /></a>
-                    </div>
-                    <div class="col-md-3">
+                    </li>
+                    <li>
                         <a href="https://www.ripe.net/"><img src="logos/RIPE_NCC_Logo2015.png" alt="RIPE NCC logo" class="img-fluid" /></a>
-                    </div>
-                    <div class="col-md-3">
+                    </li>
+                    <li>
                         <a href="https://www.speedchecker.com/"><img src="logos/speedchecker.png" alt="Speedchecker logo" class="img-fluid" /></a>
-                    </div>
-                </div>
+                    </li>
+                    <!--                </div>-->
+                </ul>
             </div>
         </section>
 
         <section>
             <div class="ack">
-                Website design inspired by <a href="" target="_blank">netray.io</a> and <a href="" target="_blank">IPv6 hitlist</a>. Designed by Maximilian Eder and Nitinder Mohan.
+                Website design inspired from <a href="https://ipv6hitlist.github.io/" target="_blank">IPv6 hitlist</a> and <a href="https://quic.comsys.rwth-aachen.de/" target="_blank">netray.io</a>. Designed by Maximilian Eder and Nitinder Mohan.
             </div>
         </section>
 

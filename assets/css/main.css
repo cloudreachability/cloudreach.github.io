@@ -257,6 +257,13 @@ table.alt tfoot {
     width: 70%;
 }
 
+.resource-img-med {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .caption {
     border: 1px dotted blue;
     text-align: center;
@@ -297,4 +304,74 @@ table.alt tfoot {
     text-align: center;
     color: dimgrey;
     padding-bottom: 2em;
+}
+
+.list-wrapper {
+    text-align: center
+}
+
+#services {
+    list-style: none;
+    /*
+    justify-content: center;
+    display: flex;
+*/
+}
+
+#services li {
+    display: inline-block;
+    margin: 0.5em;
+    width: 30%;
+}
+
+#services .square {
+    width: 20%;
+}
+
+/*button animation*/
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    display: block;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
+}
+
+.button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.button:hover:after {
+    width: 100%;
 }
