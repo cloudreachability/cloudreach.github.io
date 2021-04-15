@@ -134,9 +134,11 @@ table.alt tfoot {
     border-top: 0;
 }
 
+/*
 .nav-collapse {
     margin-left: 2em !important;
 }
+*/
 
 /*defining headers*/
 .hr-text-container {
@@ -283,7 +285,7 @@ table.alt tfoot {
 }
 
 .caption {
-    border: 1px dotted blue;
+    /*    border: 1px dotted blue;*/
     text-align: center;
     color: #6d7993;
 }
