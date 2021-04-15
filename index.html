@@ -41,15 +41,15 @@
 <body>
 
     <!-- Put nav into container to center it on the page -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">↑</a>
+            <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav container">
-                    <a class="nav-item nav-link" href="#home">Home</a>
+                    <a class="nav-item nav-link active" href="#home" style="font-size: 1.2rem">CloudReach</a>
                     <a class="nav-item nav-link" href="#result">Results</a>
                     <a class="nav-item nav-link" href="#resources">Resources</a>
                     <a class="nav-item nav-link" href="#paper">Publications</a>
@@ -69,41 +69,83 @@
             <h1 class="decorated">Global Cloud Reachability Measurements</h1>
 
             <div style="padding-top: 3em">
-                This is where we will add overview text of the project. [Please suggest some text].
+                <span>
+                    On this website, we present the overview of our global cloud reachability measurement study. You can interact with our key results and download our datasets and code for your research.
+                </span>
+            </div>
+            <br>
+            <div>
+                <span>
+                    When referencing this webpage, please cite our <a href="#www-paper">The Web Conference 2021 paper</a>.
+                </span>
+                <pre>
+                <code style="text-align: left; background-color: #F6F6F6; border-color: grey; white-space: pre">
+                    @inproceedings{cloudMeasWWW2021,
+                    author= {Corneo, Lorenzo and Eder, Maximilian and Mohan, Nitinder 
+                        and Zavodovski, Aleksandr and Bayhan, Suzan and Wong, Walter 
+                        and Gunningberg, Per and Kangasharju, Jussi and Ott, Jörg},
+                    title={{Surrounded by the Clouds}},
+                    booktitle = {Proceedings of The Web Conference 2020},
+                    publisher = {Association for Computing Machinery},
+                    address = {New York, NY, USA},
+                    url = {https://doi.org/10.1145/3442381.3449854},
+                    doi = {10.1145/3442381.3449854},
+                    year={2021},
+                    series = {WWW '21}
+                    }
+                    </code>
+                </pre>
+                <span>
+                    For more details on all associated research within this project, check out <a href="#publications">Publications</a> section.
+                </span>
             </div>
         </div>
 
+        <section id="overview">
+
+            <h2 class="decorated"><span>Overview</span></h2>
+
+            <div>
+                The motivation for this project came from our desire to provide a reality-check on motivations of edge computing. Being researchers in edge computing domain, we frequently come across the phrase <b>"cloud is too far away to support latency requirements of next-generation applications"</b> in almost all research articles/blogs.
+            </div>
+
+            <figure class="fig">
+                <img class="resource-img-med" src="images/edge-app.png">
+                <figcaption class="caption">Latency and bandwidth requirements of next-generation applications.
+                    Operation of most applications is governed by three strict latency thresholds.
+                </figcaption>
+            </figure>
+
+            <div>
+                The figure above shows approximate latency, bandwidth and expected market share of most hyped next-generation applications. We find that the latency requirements for most of these applications are governed by strict human vestibular thresholds: <b>Motion-to-Photon</b> (&#60;20ms), <b>Perceivable Latency</b> (&#60;100ms) and <b>Human Reaction Time</b> (&#60;250ms).
+                <br>
+                <span style="color: #6d7993">
+                    *Refer to our <a href="#hotnets-paper">ACM HotNets 2020</a> for more details on the next-generation application timing thresholds.
+                </span>
+            </div>
+            <br>
+            <div>
+                However, since 2010 there has been no wide-scale user-to-cloud measurement study to correlate if cloud can support the requirements of such applications. Since cloud computing landscape has evolved significantly since 2010, we sought out to launch <b>global cloud reachability measurements</b> -- quantizing latency (via Pings) and cloud network connectivity (via Traceroutes). The figure below shows the cloud providers (and their approximate compute cloud region location) that we target in our measurement.
+            </div>
+            <br>
+            <div id="clouddc">
+                <span style="color: #6d7993">
+                    Double-click on any cloud provider in legend to only show its datacenters. Hover over waypoints for more details on cloud regions.
+                </span>
+                <div id="mapDiv"></div>
+            </div>
+
+        </section>
         <!--  data    -->
         <section id="result">
 
             <h2 class="decorated"><span>Results</span></h2>
 
-            This is where we will add all the interactive plots.
-
-            <div id="clouddc" style="padding-top: 0.5em">
-
-                <h4>Distribution of Target Datacenters </h4>
-                Double-click on any cloud provider in legend to only show its datacenters
-                <div id="mapDiv"></div>
-                <span>
-                    Note: The geo-location of datacenters is <b>approximate</b>.
-                </span>
-            </div>
+            We only show the highlights of our results on this website. For more detailed results and analysis, please refer to our <a href="#publications">Publications</a>.
 
             <div id="latencyThresh" style="padding-top: 0.5em">
-                <h4>Cloud Support for Next-Generation Application Timing Thresholds</h4>
+                <h4>Cloud Support for Next-Generation Application Latency Thresholds</h4>
 
-                <figure class="fig">
-                    <img class="resource-img-med" src="images/edge-app.png">
-                    <figcaption class="caption">Latency and bandwidth requirements of next-generation applications.
-                        Operation of most applications is governed by three strict latency thresholds.
-                    </figcaption>
-                </figure>
-
-                <span>
-                    Refer to our <b>"Pruning Edge Research with Latency Shears"</b> paper published in ACM HotNets 2020 for more details on the timing thresholds.
-                    You can find it in <a href="#paper">Publications</a> section.
-                </span>
 
                 <figure class="fig">
                     <div id="worldDiv" style="padding-top: 0.5em"></div>
@@ -114,15 +156,52 @@
             <div id="latency" tyle="padding-top: 0.5em">
                 <h4>Global Cloud Access Latency</h4>
 
-                First we will show static plots here.
+                <figure class="fig">
+                    <img class="resource-img-med" src="images/cdf-rtt-closest-dc.png">
+                    <figcaption class="caption">Distribution of latencies per continent to closest datacenter.
+                    </figcaption>
+                </figure>
 
                 <br>
-<!--
-                <div class="wrapper">
-                    <a href="#" class="button"><span>Interactive Latency Plot</span></a>
-                </div>
--->
-                <a href="interactive/ecdf.html">Here is a link to the ECDF</a>
+
+                <figure class="fig">
+                    <img class="resource-img-large" src="images/latency-combined-box.png">
+                    <figcaption class="caption">Latency performance of cloud providers in different continents
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div id="country-latency" tyle="padding-top: 0.5em">
+                <h4>Country-wise Cloud Access Latency</h4>
+                <br>
+
+                <!--                <div class="wrapper">-->
+                <!--                <a href="interactive/ecdf.html" style="text-decoration: none">-->
+                <button onclick="window.open('interactive/ecdf.html', '_blank')" class="grow_skew_forward" type="button">View Interactive Plot</button>
+                <!--                </a>-->
+                <!--                <button class="grow_skew_forward">SLIDE FROM LEFT</button>-->
+                <!--                </div>-->
+                <!--                <Here is a link to the ECDF</a>-->
+
+                <br>
+                <span style="color: crimson; text-decoration: underline">Disclaimer:</span> The interactive plot is a large file and can be heavy to display on some browsers. Keep scrolling for some static results.
+
+                <br><br>
+
+                <figure class="fig">
+                    <img class="resource-img-med" src="images/cdf-psas.png">
+                    <figcaption class="caption">Latency distribution in <a href="https://en.wikipedia.org/wiki/Statistical_area_(United_States)" target="_blank">US primary statistical areas</a> weighted by normalized population.
+                    </figcaption>
+                </figure>
+
+                <br>
+
+                <figure class="fig">
+                    <img class="resource-img-med" src="images/cdf-asia.png">
+                    <figcaption class="caption">Latency distribution in some Asian countries with and without in-country datacenters.
+                    </figcaption>
+                </figure>
+
             </div>
         </section>
 
@@ -136,29 +215,36 @@
             <div class="resource atlas">
                 <h3>RIPE Atlas Platform</h3>
 
-                <figure class="fig">
+                <span>
+                    We use 8000+ RIPE Atlas probes deployed in 184 countries to periodically measure user-to-cloud latency (ping) and path length (traceroute) over ICMP and TCP. Find out more about RIPE Atlas probes and connectivity <a href="https://atlas.ripe.net/" target="_blank">here</a>.
+                </span>
+
+                <br>
+
+                <figure class="fig" style="padding-top: 1.5em">
                     <img class="resource-img" src="images/atlas-probe-density.png">
                     <figcaption class="caption">Distribution of 8000+ Atlas probes used in our measurements</figcaption>
                 </figure>
 
-                <div id="dataset" style="padding-top: 0.5em">
-                    <h4>
+                <div id="dataset">
+                    <h5>
                         <i class="fal fa-database"></i>
                         Dataset
-                    </h4>
+                    </h5>
+                    <b>Link:</b> <a href="https://mediatum.ub.tum.de/1593899">MediaTUM</a>
+                    <br>
+                    <b>Size:</b> 60GB+
                 </div>
 
-                This is where we will explain our datasets.
+                <br>
 
-                <div id="code" style="padding-top: 0.5em">
-                    <h4>
+                <div id="code">
+                    <h5>
                         <i class="far fa-code"></i>
                         Code
-                    </h4>
+                    </h5>
+                    <b>Link:</b> <a href="https://github.com/lorenzocorneo/surrounded-by-the-clouds">GitHub</a>
                 </div>
-
-                We have setup a GitHub page explaining the dataset and detailing reproducibility
-                <a href="https://github.com/lorenzocorneo/surrounded-by-the-clouds/blob/main/README.md">here</a>.
 
             </div>
 
@@ -182,7 +268,7 @@
 
 
                 <!--  next publication  -->
-                <tr style="background-color: #ffffff; border: none">
+                <tr style="background-color: #ffffff; border: none" id="www-paper">
                     <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/surrounded_WWW.pdf" class="no-decoration" target="_blank">
                             <img class="pubs_img" src="documents/surrounded_WWW.png">
                         </a>
@@ -216,9 +302,9 @@
                 <br>
 
                 <!--  next publication  -->
-                <tr style="background-color: #ffffff; border: none">
+                <tr style="background-color: #ffffff; border: none" id="ifip-paper">
                     <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="" class="no-decoration" target="_blank">
-                            <img class="pubs_img" src="documents/tbr.png">
+                            <img class="pubs_img" src="documents/ifip_edge_placement.png">
                         </a>
                     </td>
                     <td style="vertical-align: top; padding-left: 3px">
@@ -251,7 +337,7 @@
                 <br>
 
                 <!--  next publication  -->
-                <tr style="background-color: #ffffff; border: none">
+                <tr style="background-color: #ffffff; border: none" id="hotnets-paper">
                     <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/pruningHotnets2020.pdf" class="no-decoration" target="_blank">
                             <img class="pubs_img" src="documents/pruningHotnets2020.png">
                         </a>
@@ -297,7 +383,7 @@
 
         <!--Partners-->
 
-        <section style="margin: auto; width: 100%; padding-bottom: 3em" id="about-text">
+        <section style="margin: auto; width: 100%; padding-bottom: 3em" id="partners">
 
             <h2 class="decorated"><span>Partners</span></h2>
 
@@ -339,6 +425,34 @@
         </section>
 
     </div> <!-- /container -->
+
+    <script>
+        $(window).resize(function() {
+            $('body').css('padding-top', parseInt($('#main-navbar').css("height")) + 10);
+        });
+
+        $(window).load(function() {
+            $('body').css('padding-top', parseInt($('#main-navbar').css("height")) + 10);
+        });
+
+    </script>
+
+    <script>
+        $("pre code").each(function() {
+            var html = $(this).html();
+            var pattern = html.match(/\s*\n[\t\s]*/);
+            $(this).html(html.replace(new RegExp(pattern, "g"), '\n'));
+        });
+
+    </script>
+
+    <script>
+        $(".nav a").on("click", function() {
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+
+    </script>
 
     <script>
         skel.on('+medium -medium', function() {

@@ -7,6 +7,12 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url(http://weloveiconfonts.com/api/?family=zocial);
 
+@media screen and (min-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
 /* entypo */
 [class*="entypo-"]:before {
     font-family: 'entypo', sans-serif;
@@ -33,7 +39,7 @@ table {
 
 body {
     font-family: "Computer Modern Sans", serif;
-
+    font-size: 110% !important;
 }
 
 .h2,
@@ -48,6 +54,7 @@ h4 {
     font-size: 1.5rem;
     padding-top: 4rem;
     margin-top: -2rem;
+    font-weight: bold;
 }
 
 .topmargin {
@@ -264,9 +271,17 @@ table.alt tfoot {
     width: 50%;
 }
 
+.resource-img-large {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 .caption {
     border: 1px dotted blue;
     text-align: center;
+    color: #6d7993;
 }
 
 /*Header CSS*/
@@ -302,7 +317,7 @@ table.alt tfoot {
 /*Ack section CSS*/
 .ack {
     text-align: center;
-    color: dimgrey;
+    color: #6d7993;
     padding-bottom: 2em;
 }
 
@@ -328,50 +343,171 @@ table.alt tfoot {
     width: 20%;
 }
 
+/*
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+*/
+
 /*button animation*/
+/*
+* {
+    box-sizing: border-box;
+}
+
 .wrapper {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.button {
-    display: block;
-    width: 300px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #333;
-    border: 2px solid #333;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
-}
-
-.button span {
-    position: relative;
-    z-index: 2;
-}
-
-.button:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #ff003b;
-    transition: all .35s;
-}
-
-.button:hover {
-    color: #fff;
-}
-
-.button:hover:after {
+    max-width: 65rem;
     width: 100%;
+    margin: 2rem auto;
+    padding: 5rem;
+    text-align: center;
+    background: #fff;
+    border: 0.5rem solid #34495e;
+}
+
+hr {
+    border: 0;
+    border-bottom: 0.0625rem solid #bbb;
+    margin: 3rem 0;
+}*/
+
+button {
+    font-size: 1.1em !important;
+    background: #3498db;
+    color: #fff;
+    border: 0.2rem solid #3498db;
+    padding: 0.8em 0.75em;
+    margin: 2em;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+button:hover {
+    color: #3498db;
+}
+
+button::after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    z-index: -3;
+    padding: 0.85em 0.75em;
+    display: block;
+    overflow: hidden;
+}
+
+button[class^="slide"]::after {
+    transition: all 0.35s;
+}
+
+button[class^="slide"]:hover::after {
+    left: -5;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+}
+
+button.slide_from_left::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+}
+
+button.slide_from_right::after {
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: -100%;
+}
+
+button.slide_from_top::after {
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+}
+
+button.slide_from_bottom::after {
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+}
+
+button[class^="grow"]::after {
+    transition: all 0.3s ease;
+}
+
+button[class^="grow"]:hover::after {
+    transition: all 0.3s ease-out;
+}
+
+button.grow_box::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+}
+
+button.grow_box:hover::after {
+    transform: scale(1, 1);
+}
+
+button.grow_ellipse::after {
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8.34em;
+    transform: scale(0, 0);
+}
+
+button.grow_ellipse:hover::after {
+    transform: scale(1, 1);
+}
+
+button.grow_skew_forward::after {
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+}
+
+button.grow_skew_forward:hover::after {
+    transform: skewX(-45deg) scale(1, 1);
+}
+
+button.grow_skew_backward::after {
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(45deg) scale(0, 1);
+}
+
+button.grow_skew_backward:hover::after {
+    transform: skewX(45deg) scale(1, 1);
+}
+
+button.grow_spin::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+}
+
+button.grow_spin:hover::after {
+    transform: scale(1, 1) rotate(0deg);
 }
