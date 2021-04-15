@@ -43,13 +43,13 @@
     <!-- Put nav into container to center it on the page -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="#home"><i class="fab fa-mixcloud fa-2x"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav container">
-                    <a class="nav-item nav-link active" href="#home" style="font-size: 1.2rem">CloudReach</a>
+                <div class="navbar-nav container" id="navbarNav">
+                    <a class="nav-item nav-link active" href="#home" style="font-size: 1.2rem"></a>
                     <a class="nav-item nav-link" href="#result">Results</a>
                     <a class="nav-item nav-link" href="#resources">Resources</a>
                     <a class="nav-item nav-link" href="#paper">Publications</a>
@@ -64,7 +64,7 @@
 -->
     <div class="container">
 
-        <div id="home" style="padding-top: 6em">
+        <div id="home" style="padding-top: 3em">
 
             <h1 class="decorated">Global Cloud Reachability Measurements</h1>
 
@@ -79,13 +79,11 @@
                     When referencing this webpage, please cite our <a href="#www-paper">The Web Conference 2021 paper</a>.
                 </span>
                 <pre>
-                <code style="text-align: left; background-color: #F6F6F6; border-color: grey; white-space: pre">
+                <code style="text-align: left; background-color: #F6F6F6; border-color: black; white-space:pre-line">
                     @inproceedings{cloudMeasWWW2021,
-                    author= {Corneo, Lorenzo and Eder, Maximilian and Mohan, Nitinder 
-                        and Zavodovski, Aleksandr and Bayhan, Suzan and Wong, Walter 
-                        and Gunningberg, Per and Kangasharju, Jussi and Ott, Jörg},
+                    author= {Corneo, Lorenzo and Eder, Maximilian and Mohan, Nitinder and Zavodovski, Aleksandr and Bayhan, Suzan and Wong, Walter and Gunningberg, Per and Kangasharju, Jussi and Ott, Jörg},
                     title={{Surrounded by the Clouds}},
-                    booktitle = {Proceedings of The Web Conference 2020},
+                    booktitle = {Proceedings of The Web Conference 2021},
                     publisher = {Association for Computing Machinery},
                     address = {New York, NY, USA},
                     url = {https://doi.org/10.1145/3442381.3449854},
@@ -93,8 +91,8 @@
                     year={2021},
                     series = {WWW '21}
                     }
-                    </code>
-                </pre>
+                </code>
+                                </pre>
                 <span>
                     For more details on all associated research within this project, check out <a href="#publications">Publications</a> section.
                 </span>
@@ -437,14 +435,15 @@
 
     </script>
 
+    <!--
     <script>
         $("pre code").each(function() {
             var html = $(this).html();
             var pattern = html.match(/\s*\n[\t\s]*/);
             $(this).html(html.replace(new RegExp(pattern, "g"), '\n'));
         });
-
     </script>
+-->
 
     <script>
         $(".nav a").on("click", function() {

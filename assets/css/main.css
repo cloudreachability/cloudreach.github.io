@@ -134,6 +134,10 @@ table.alt tfoot {
     border-top: 0;
 }
 
+.nav-collapse {
+    margin-left: 2em !important;
+}
+
 /*defining headers*/
 .hr-text-container {
     width: 100%;
@@ -343,7 +347,6 @@ table.alt tfoot {
     width: 20%;
 }
 
-/*
 pre {
     overflow-x: auto;
     white-space: pre-wrap;
@@ -351,8 +354,8 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    text-align: left !important;
 }
-*/
 
 /*button animation*/
 /*
