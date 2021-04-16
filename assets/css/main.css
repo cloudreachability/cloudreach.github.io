@@ -220,19 +220,19 @@ table.alt tfoot {
 }
 
 .pubs_title {
-    font-family: 'CMUSansSerifBold';
+    font-family: 'CMUSansSerif';
     font-size: 1.2em;
 }
 
 .pubs_title_a {
     text-decoration: none;
     border: none;
-    font-family: 'CMUSansSerifBold';
+    font-family: 'CMUSansSerif';
     font-size: 16pt;
 }
 
 .pubs_content {
-    font-family: 'CMUSansSerifBold';
+    font-family: 'CMUSansSerif';
     font-size: 16pt;
 }
 
