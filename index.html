@@ -76,7 +76,7 @@
             <br>
             <div>
                 <span>
-                    When referencing this webpage, please cite our <a href="#www-paper">The Web Conference 2021 paper</a>.
+                    When referencing this webpage, please cite our <a href="#www-paper">WebConf 2021</a> and <a href="#imc-paper">IMC 2021</a> paper.
                 </span>
                 <pre>
                 <code style="text-align: left; background-color: #F6F6F6; border-color: black; white-space:pre-line">
@@ -92,7 +92,21 @@
                     series = {WWW '21}
                     }
                 </code>
-                                </pre>
+                
+                <code style="text-align: left; background-color: #F6F6F6; border-color: black; white-space:pre-line">
+                    @inproceedings{cloudyIMC2021,
+                    author= {Dang, The Khang and Mohan, Nitinder and Corneo, Lorenzo and Zavodovski, Aleksandr and Ott, Jörg and Kangasharju, Jussi},
+                    title={{Cloudy with a Chance of Short RTTs: Analyzing Cloud Connectivity in the Internet}},
+                    booktitle = {Proceedings of Internet Measurement Conference},
+                    publisher = {Association for Computing Machinery},
+                    address = {New York, NY, USA},
+                    url = {https://doi.org/10.1145/3487552.3487854},
+                    doi = {10.1145/3487552.3487854},
+                    year={2021},
+                    series = {IMC '21}
+                    }
+                </code>
+                </pre>
                 <span>
                     For more details on all associated research within this project, check out <a href="#paper">Publications</a> section.
                 </span>
@@ -267,6 +281,55 @@
 
             <table>
 
+                <!--  next publication  -->
+                <tr style="background-color: #ffffff; border: none" id="imc-paper">
+                    <td style="border: 1; padding-top: 1em; padding-right: 1.1em; width: 30%"><a href="documents/cloudy-imc-2021.pdf" class="no-decoration" target="_blank">
+                            <img class="pubs_img" src="documents/cloudy-imc-2021.png">
+                        </a>
+                    </td>
+                    <td style="vertical-align: top; padding-left: 3px">
+                        <div style="position: relative">
+                            <span class="pubs_title">
+                                <a href="documents/cloudy-imc-2021.pdf" style="text-decoration: none; border: none" target="_blank">
+                                    Cloudy with a Chance of Short RTTs: Analyzing Cloud Connectivity in the Internet
+                                </a>
+                            </span>
+                            <br>
+                            <span>
+                                <b style="text-decoration: underline">Authors:</b>
+                                The Khang Dang*, Nitinder Mohan*, Lorenzo Corneo, Aleksandr Zavodovski, Jörg Ott, Jussi Kangasharju
+                                <text style="float: right">(* joint first authors)</text>
+                            </span>
+                            <br>
+                            <span style="pub-text">
+                                <b style="text-decoration: underline">Publication Venue:</b>
+                                21<sup>st</sup> ACM Internet Measurement Conference (IMC) - <b>2021</b>
+                            </span>
+                            <br>
+                            <div>
+                                <!--
+                                <a class="btn btn-primary" href="https://youtu.be/bYtJ4om-jnk" target="_blank">
+                                    <i class="fas fa-video"></i> Video
+                                </a>
+-->
+                                <a class="btn btn-primary" href="https://doi.org/10.1145/3487552.3487854" target="_blank">
+                                    <i class="fas fa-globe"></i> DOI
+                                </a>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#collapseimc" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Read Abstract
+                                </a>
+                                <div class="collapse" id="collapseimc">
+                                    <div class="card card-body">
+                                        Cloud computing has seen continuous growth over the last decade. The recent rise in popularity of next-generation applications brings forth the question: “Can current cloud infrastructure support the low latency requirements of such apps?” Specifically, the interplay of wireless last-mile and investments of cloud operators in setting up direct peering agreements with ISPs globally to current cloud reachability and latency has remained largely unexplored.
+                                        This paper investigates the state of end-user to cloud connec- tivity over wireless media through extensive measurements over six months. We leverage 115,000 wireless probes on the Speed- checker platform and 195 cloud regions from 9 well-established cloud providers. We evaluate the suitability of current cloud infras- tructure to meet the needs of emerging applications and highlight various hindering pressure points. We also compare our results to a previous study over RIPE Atlas. Our key findings are: (i) the most impact on latency comes from the geographical distance to the dat- acenter; (ii) the choice of a measurement platform can significantly influence the results; (iii) wireless last-mile access contributes sig- nificantly to the overall latency, almost surpassing the impact of the geographical distance in many cases. We also observe that cloud providers with their own private network backbone and direct peer- ing agreements with serving ISPs offer noticeable improvements in latency, especially in its consistency over longer distances.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <br>
 
                 <!--  next publication  -->
                 <tr style="background-color: #ffffff; border: none" id="www-paper">
