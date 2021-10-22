@@ -160,15 +160,27 @@
                 <span style="color: #6d7993">
                     Global coverage for supporting the timing thresholds. Select the different threshold values from drop-down to see what percentile of measurements from each country supports it.
                 </span>
+				<br>
 
+				<h5>RIPE Atlas</h5>
+				
                 <figure class="fig">
                     <div id="worldDiv" style="padding-top: 0.5em"></div>
                 </figure>
+				
+				<h5>Speedchecker</h5>
+				
+				<figure class="fig">
+					<div id="worldScDiv" style="padding-top: 0.5em"></div>
+				</figure>
 
             </div>
 
             <div id="latency" tyle="padding-top: 0.5em">
                 <h4>Global Cloud Access Latency</h4>
+				<br>
+				
+				<h5>RIPE Atlas</h5>
 
                 <figure class="fig">
                     <img class="resource-img-med" src="images/cdf-rtt-closest-dc.png">
@@ -183,11 +195,30 @@
                     <figcaption class="caption">Latency performance of cloud providers in different continents
                     </figcaption>
                 </figure>
+				
+				<h5>Speedchecker</h5>
+				
+				<figure class="fig">
+                    <img class="resource-img-med" src="images/Speedchecker/tcp_continents.png">
+                    <figcaption class="caption">Distribution of latencies per continent to closest datacenter.
+                    </figcaption>
+                </figure>
+
+                <br>
+
+                <figure class="fig">
+                    <img class="resource-img-large" src="images/Speedchecker/tcp_providers.png">
+                    <figcaption class="caption">Latency performance of cloud providers in different continents
+                    </figcaption>
+                </figure>
             </div>
 
             <div id="country-latency" tyle="padding-top: 0.5em">
                 <h4>Country-wise Cloud Access Latency</h4>
                 <br>
+				
+				<h5>RIPE Atlas</h5>
+				<br>
 
                 <!--                <div class="wrapper">-->
                 <!--                <a href="interactive/ecdf.html" style="text-decoration: none">-->
@@ -215,6 +246,12 @@
                     <figcaption class="caption">Latency distribution in some Asian countries with and without in-country datacenters.
                     </figcaption>
                 </figure>
+				
+				<h5>Speedchecker</h5>
+				<br>
+				<figure class="fig">
+					<div id="ScCountryDiv" style="padding-top: 0.5em"></div>
+				</figure>
 
             </div>
         </section>
@@ -266,8 +303,37 @@
 
             <div class="resource speedchecker">
                 <h3>Speedchecker Platform</h3>
+				
+				<span>
+					For Speedchecker we used 115,000+ probes deployed in 140 countries to measure latency (TCP ping) and path lengths (ICMP traceroute).
+				</span>
+				
+				<br>
 
-                <h4 style="color: red">To be out soon!</h4>
+                <figure class="fig" style="padding-top: 1.5em">
+                    <img class="resource-img" src="images/Speedchecker/probe_numbers_heatmap.png">
+                    <figcaption class="caption">Distribution of 115,000+ Speedchecker probes used in our measurements</figcaption>
+                </figure>
+
+                <div id="dataset">
+                    <h5>
+                        <i class="fal fa-database"></i>
+                        Dataset
+                    </h5>
+                    <b>Link:</b> <a href="https://mediatum.ub.tum.de/1624200">MediaTUM</a>
+                    <br>
+                    <b>Size:</b> 5GB+
+                </div>
+
+                <br>
+
+                <div id="code">
+                    <h5>
+                        <i class="far fa-code"></i>
+                        Code
+                    </h5>
+                    <b>Link:</b> <a href="https://github.com/tkdang97/Cloudy-with-a-Chance-of-Short-RTTs">GitHub</a>
+                </div>
             </div>
         </section>
 
@@ -590,6 +656,21 @@
         });
 
     </script>
+	
+	<script>
+        $(function() {
+            $("#worldScDiv").load("interactive/Speedchecker/speedchecker_choropleth.html");
+        });
+
+    </script>
+	
+	<script>
+        $(function() {
+            $("#ScCountryDiv").load("interactive/Speedchecker/country_cdf.html");
+        });
+
+    </script>
+	
 
     <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=6d7993&w=200&t=tt&d=vWT7aQctDaDipucIyERbF_yGETggjMM3u56XX2s2prg&co=ffffff&cmo=d73b5e&cmn=47a747&ct=001a33"></script>
 
